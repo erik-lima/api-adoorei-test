@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->integer('amount');
+            $table->integer('total_value');
             $table->integer('total_items');
             $table->integer('status')->comment('1:processing; 2:approved; 3:canceled');
             $table->timestamps();

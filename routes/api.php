@@ -27,5 +27,7 @@ Route::group(['prefix' => 'products'], function () {
 Route::group(['prefix' => 'sales'], function () {
     Route::get('/', [SaleController::class, 'index']);
     Route::post('/', [SaleController::class, 'store']);
-    Route::get('/{sale}', [SaleController::class, 'get']);
+    Route::get('/{sale}', [SaleController::class, 'show']);
+    Route::put('/{sale}', [SaleController::class, 'update']);
+    Route::put('/{sale}/cancel', [SaleController::class, 'cancel']);
 });
