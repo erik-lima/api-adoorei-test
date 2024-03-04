@@ -20,6 +20,10 @@ use App\Http\Controllers\SaleController;
 //     return $request->user();
 // });
 
+Route::get('/', function() {
+    return view('docs.index');
+});
+
 Route::group(['prefix' => 'products'], function () {
     Route::get('/', [ProductController::class, 'index']);
 });
